@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Play Video Example</title>
+  <title>Click Image Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 150px;
+    }
+    
+    img {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    
+    img:hover {
+      transform: scale(1.1);
+    }
+    
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555;
+      display: none;
+    }
+  </style>
+  <script>
+    function showMessage() {
+      var message = document.getElementById("message");
+      message.style.display = "block";
+    }
+  </script>
 </head>
 <body>
-	<h1>Click to Play Video</h1>
-	<p>Click on the image below to play the video:</p>
-	<a href="#" onclick="playVideo()">
-		<img src="video_thumbnail.jpg" alt="Video Thumbnail" width="480" height="360">
-	</a>
-	<video id="videoPlayer" width="480" height="360" controls>
-		<source src="Pilar, Tunog Filipino.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
-	<script>
-		function playVideo() {
-			var video = document.getElementById("videoPlayer");
-			video.play();
-		}
-	</script>
+  <h1>Click the Image</h1>
+  <img src="Screenshot 2023-03-26 100243.png" alt="Clickable Image" onclick="showMessage()">
+  <p id="message" class="message">You clicked the image!</p>
 </body>
 </html>
