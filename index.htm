@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Play Video Example</title>
+</head>
+<body>
+	<h1>Click to Play Video</h1>
+	<p>Click on the image below to play the video:</p>
+	<a href="#" onclick="playVideo()">
+		<img src="video_thumbnail.jpg" alt="Video Thumbnail" width="480" height="360">
+	</a>
+	<video id="videoPlayer" width="480" height="360" controls>
+		<source src="Pilar, Tunog Filipino.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	<script>
+		function playVideo() {
+			var video = document.getElementById("videoPlayer");
+			video.play();
+		}
+	</script>
+</body>
+</html>
